@@ -11,10 +11,7 @@ for i in range(len(cpu_usage_percpu)):
 
 syst = platform.system() 
 
-if syst == "Windows": os_name = "Windows"
-elif syst == "Linux": os_name = "Linux"
-elif syst == "Darwin": os_name = "macOS"
-else: os_name = "Unknown"
+if syst == "Darwin": os_name = "macOS"
 
 data = {
     "os": {
