@@ -14,7 +14,8 @@ cpu_usage_percpu = psutil.cpu_percent(interval=1, percpu=True) ## Создает
 for i in range(len(cpu_usage_percpu)):                      ## Перебирает элементы списка по индексу, делает запись
   cpu_usage_percpu[i] = f"cpu{i} - {cpu_usage_percpu[i]}"  ## более читаемой и понятной
 
-syst = platform.system()                 ## Получает название ОС, но т.к. macOS в системе называется Darwin, я решил                                           ## вручную это поправить, чтобы было понятнее для тех, кто это не знает
+syst = platform.system()                 ## Получает название ОС, но т.к. macOS в системе называется Darwin, я решил
+                                          ## вручную это поправить, чтобы было понятнее для тех, кто это не знает
 if syst == "Darwin": os_name = "macOS"
                     
 data = {      ## Создаем словарь
